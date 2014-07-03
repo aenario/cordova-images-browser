@@ -45,6 +45,7 @@ public class ImagesBrowser extends CordovaPlugin {
     public JSONArray makeImageList(CordovaInterface cordova){
         // get images ID & path
         String[] projection = {MediaStore.Images.Media._ID, MediaStore.Images.Media.DATA};
+        Looper.prepare();
         // Create the cursor pointing to the SDCard
         CursorLoader loader = new CursorLoader(cordova.getActivity(),
                 MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
