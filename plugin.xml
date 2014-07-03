@@ -19,7 +19,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="ImagesBrowser" >
-                <param name="android-package" value="io.cozy.cordova-images-browser"/>
+                <param name="android-package" value="io.cozy.imagesbrowser.ImagesBrowser"/>
             </feature>
         </config-file>
 
