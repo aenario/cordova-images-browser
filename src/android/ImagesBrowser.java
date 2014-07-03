@@ -29,7 +29,7 @@ public class ImagesBrowser extends CordovaPlugin {
      * @return                  True if the action was valid, false if not.
      */
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("getImageList")) {
+        if (action.equals("getImagesList")) {
             plugin = this;
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
