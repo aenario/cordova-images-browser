@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="io.cozy.cordova-images-browser"
+    version="0.0.1">
+    <name>ImagesBrowser</name>
+    <description>Cordova Images Mediastore Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,images,mediastore</keywords>
+    <repo>https://github.com/aenario/cordova-images-browser.git</repo>
+    <issue>https://github.com/aenario/cordova-images-browser/issues/</issue>
+
+    <js-module src="www/images-browser.js" name="imagesbrowser">
+        <clobbers target="ImagesBrowser" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ImagesBrowser" >
+                <param name="android-package" value="io.cozy.cordova-images-browser"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/ImagesBrowser.java" target-dir="src/io/cozy/imagesbrowser" />
+    </platform>
+
+    <!-- ios  One day maybe-->
+    <!-- <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Device">
+                <param name="ios-package" value="CDVDevice"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/CDVDevice.h" />
+        <source-file src="src/ios/CDVDevice.m" />
+    </platform> -->
+
+</plugin>
