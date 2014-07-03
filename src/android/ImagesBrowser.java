@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import android.annotation.SuppressLint;
 import android.content.CursorLoader;
+import android.os.Looper;
 import android.database.Cursor;
 import android.provider.MediaStore;
 
