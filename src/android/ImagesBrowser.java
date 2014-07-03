@@ -27,7 +27,7 @@ public class ImagesBrowser extends CordovaPlugin {
      * @return                  True if the action was valid, false if not.
      */
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-        if (action.equals("getImageList")) {
+        if (action.equals("getImagesList")) {
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
                     callbackContext.success(makeImageList(cordova));
