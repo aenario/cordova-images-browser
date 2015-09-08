@@ -82,10 +82,13 @@ public class ImagesBrowser extends CordovaPlugin {
                 MediaStore.Images.Media.DATE_TAKEN + " DESC");
         // Get the column index of the Thumbnails Image ID
         Cursor cursor = loader.loadInBackground();
-        int columnIndex = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
         JSONArray results = new JSONArray();
-        while(cursor.moveToNext()){
-            results.put(cursor.getString(columnIndex));
+        // Cursor may be null when sdcard isnt mounted.
+        if (cursor != null) {
+            int columnIndex = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+            while(cursor.moveToNext()){
+                results.put(cursor.getString(columnIndex));
+            }
         }
         return results;
     }
