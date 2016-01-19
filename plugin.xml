@@ -8,8 +8,8 @@
     <description>Cordova Images Mediastore Plugin</description>
     <license>Apache 2.0</license>
     <keywords>cordova,images,mediastore</keywords>
-    <repo>https://github.com/aenario/cordova-images-browser.git</repo>
-    <issue>https://github.com/aenario/cordova-images-browser/issues/</issue>
+    <repo>https://github.com/cozy/cordova-images-browser.git</repo>
+    <issue>https://github.com/cozy/cordova-images-browser/issues/</issue>
 
     <js-module src="www/images-browser.js" name="imagesbrowser">
         <clobbers target="ImagesBrowser" />
